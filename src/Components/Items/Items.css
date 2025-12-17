@@ -1,0 +1,46 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 500px;
+}
+
+.img-box {
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 350px;
+    height: 450px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.img-box img:hover {
+    transform: translateY(-20px);
+}
+
+.item-info {
+    width: 350px;
+    border-radius: 30px;
+    padding: 10px 15px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.item-name {
+    background-color: #354F31;
+}
+
+.item-price {
+    color: #1a1a1a;
+}
+

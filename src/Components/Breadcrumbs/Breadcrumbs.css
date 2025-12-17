@@ -1,0 +1,36 @@
+.breadcrumbs {
+    margin-top: 50px;
+    margin-left: 40px;
+    width: 80%;
+    margin-inline: auto;
+}
+
+.breadcrumbs-box {
+    direction: ltr;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.breadcrumbs-box p {
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.links {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.links:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.breadcrumbs-box img {
+    width: 15px;
+    height: 12px;
+}

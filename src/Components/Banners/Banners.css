@@ -1,0 +1,10 @@
+.banner-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.banner {
+    width: 1200px;
+    border-radius: 50px;
+}

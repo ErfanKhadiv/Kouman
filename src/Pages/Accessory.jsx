@@ -1,15 +1,11 @@
-import React, { useContext } from 'react'
-import { ProductsContext } from '../Context/ProductsContext'
 import { ProductsDisplay } from '../Components/ProductsDisplay/ProductsDisplay'
+import { useProducts } from '../Context/useProducts'
+import { useLanguage } from '../i18n/useLanguage'
 
 export const Accessory = () => {
+  const { data } = useProducts()
+  const { t } = useLanguage()
+  const accessories = data.filter((item) => item.category === 'accessory')
 
-    let {data} = useContext(ProductsContext)
-    let accessory_data = data.filter((item) => item.category === "accessory")
-
-    return (
-        <div>
-            <ProductsDisplay title={"اکسسوری"} products={accessory_data} />
-        </div>
-    )
+  return <ProductsDisplay title={t('titleAccessory')} products={accessories} />
 }

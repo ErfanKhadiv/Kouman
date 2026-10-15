@@ -95,3 +95,41 @@
         text-align: center;
     }
 }
+
+/* ---- additions: validation messages, mode switch ---- */
+.form-box .link-button {
+    all: unset;
+    font-weight: 600;
+    color: #ED8E0A;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form-box .link-button:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.form-box .link-button:focus-visible,
+.form-box input:focus-visible,
+.form-box button:focus-visible {
+    outline: 3px solid #F0E6D3;
+    outline-offset: 2px;
+}
+
+.field-error {
+    color: #ffb4a8;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.form-success {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #cfe8c8;
+    text-align: center;
+}
+
+.input-boxes input[aria-invalid="true"] {
+    outline: 2px solid #ffb4a8;
+}

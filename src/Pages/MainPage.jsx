@@ -1,18 +1,17 @@
-import React, { useContext } from 'react'
 import './CSS/MainPage.css'
 import { Banners } from '../Components/Banners/Banners'
 import { ProductsDisplay } from '../Components/ProductsDisplay/ProductsDisplay'
-import { ProductsContext } from '../Context/ProductsContext'
+import { useProducts } from '../Context/useProducts'
+import { useLanguage } from '../i18n/useLanguage'
 
+export const MainPage = ({ banner }) => {
+  const { data } = useProducts()
+  const { t } = useLanguage()
 
-export const MainPage = (props) => {
-
-    let {data} = useContext(ProductsContext)
-
-    return (
-        <div>
-            <Banners banner={props.banner}/>
-            <ProductsDisplay title={"محصولات"} products={data}/>
-        </div>
-    )
+  return (
+    <div>
+      <Banners banner={banner} />
+      <ProductsDisplay title={t('titleAll')} products={data} />
+    </div>
+  )
 }

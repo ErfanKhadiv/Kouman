@@ -1,21 +1,29 @@
-import React from 'react'
 import './Breadcrumbs.css'
 import arrow_icon from '../../../public/duotone/angle-right.svg'
 import { Link } from 'react-router'
+import { useLanguage } from '../../i18n/useLanguage'
 
-export const Breadcrumbs = (props) => {
+const CATEGORY_KEYS = {
+  clothes: 'navClothes',
+  accessory: 'navAccessory',
+}
 
-    let product_data = props.product;
+export const Breadcrumbs = ({ product }) => {
+  const { t } = useLanguage()
 
-    return (
-        <div className='breadcrumbs'>
-            <div className='breadcrumbs-box'>
-                <p>
-                    <Link className='links' to={'/'}>topialand <img src={arrow_icon} alt="arrow" /></Link>
-                    <Link className='links' to={`/${product_data.category}`}>{product_data.category} <img src={arrow_icon} alt="arrow" /></Link>
-                    {product_data.name}
-                </p>
-            </div>
-        </div>
-    )
+  return (
+    <nav className='breadcrumbs' aria-label={t('breadcrumbAria')}>
+      <div className='breadcrumbs-box'>
+        <p>
+          <Link className='links' to='/'>
+            {t('navHome')} <img src={arrow_icon} alt='' />
+          </Link>
+          <Link className='links' to={`/${product.category}`}>
+            {t(CATEGORY_KEYS[product.category] ?? 'navHome')} <img src={arrow_icon} alt='' />
+          </Link>
+          {product.name.trim()}
+        </p>
+      </div>
+    </nav>
+  )
 }

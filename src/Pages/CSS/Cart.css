@@ -207,3 +207,69 @@
         font-size: 15px;
     }
 }
+
+/* ---- additions: quantity controls, remove button, messages ---- */
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-controls button {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #354F31;
+    background: transparent;
+    color: #354F31;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.qty-controls button:hover:not(:disabled) {
+    background: #354F3122;
+}
+
+.qty-controls button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    justify-self: start;
+}
+
+.purchase-right button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.cart-message {
+    font-size: 16px;
+    color: #354F31;
+}
+
+.cart a:focus-visible,
+.cart button:focus-visible,
+.cart input:focus-visible {
+    outline: 3px solid #354F31;
+    outline-offset: 2px;
+}
+
+@media(max-width: 500px){
+    .cart-items,
+    .cart-title ul {
+        gap: 6px;
+    }
+
+    .qty-controls button {
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+    }
+}

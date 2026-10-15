@@ -3,8 +3,8 @@ import image2 from './DogmNabash/Dogm-nabash-1.jpg'
 import image3 from './DogmNabash/Dogm-nabash-2.jpg'
 import image4 from './DogmNabash/Dogm-nabash-3.jpg'
 
-import image5 from './MiaLand/MiaLand1.jpg'
-import image6 from './MiaLand/MiaLand2.png'
+import image5 from './MiaLand/Mialand1.jpg'
+import image6 from './MiaLand/Mialand2.png'
 
 import image7 from './MogKouman/mug-blue2.jpg'
 import image8 from './MogKouman/mug-green.jpg'
@@ -30,7 +30,6 @@ let all_products = [
         id: 1,
         name:' تیشرت دگم نباش',
         image: [image1, image4, image3, image2],
-        price_display: '850,000',
         price: 850000,
         des: [  "ارسال به همراه استیکر پک و کارت تشکر هدیه", "۱۰۰‌٪ پنبه از دشت‌های کورشتوپیا", 
                 "دوخته شده توسط خیاط‌های زبردست ایمان آباد", "چاپ سیلک برجسته توسط هنرمندان میالند",
@@ -43,7 +42,6 @@ let all_products = [
         id: 2,
         name:'تیشرت میالند',
         image: [image6, image5],
-        price_display: '700,000',
         price: 700000,
         des: [  "ارسال به همراه استیکر پک و کارت تشکر هدیه", "۱۰۰‌٪ پنبه از دشت‌های کورشتوپیا", 
                 "دوخته شده توسط خیاط‌های زبردست ایمان آباد", "چاپ سیلک برجسته توسط هنرمندان میالند",
@@ -56,8 +54,6 @@ let all_products = [
         id: 3,
         name:' ماگ کومان ',
         image: [image7, image8, image9],
-        image4: null,
-        price_display: '230,000',
         price: 230000,
         des: [  "کاملا دست ساز"],
         category: "accessory" 
@@ -67,7 +63,6 @@ let all_products = [
         id: 4,
         name:' تیشرت کوروش زراندوز',
         image: [image10, image11, image12, image13],
-        price_display: '900,000',
         price: 900000,
         des: [  "ارسال به همراه استیکر پک و کارت تشکر هدیه", "۱۰۰‌٪ پنبه از دشت‌های کورشتوپیا", 
                 "دوخته شده توسط خیاط‌های زبردست ایمان آباد", "چاپ سیلک برجسته توسط هنرمندان میالند",
@@ -80,7 +75,6 @@ let all_products = [
         id: 5,
         name:' تیشرت ایمان دسکتاپ',
         image: [image15, image14, image16],
-        price_display: '1,100,000',
         price: 1100000,
         des: [  "ارسال به همراه استیکر پک و کارت تشکر هدیه", "۱۰۰‌٪ پنبه از دشت‌های کورشتوپیا", 
                 "دوخته شده توسط خیاط‌های زبردست ایمان آباد", "چاپ سیلک برجسته توسط هنرمندان میالند",
@@ -93,7 +87,6 @@ let all_products = [
         id: 6,
         name:' تیشرت الحافوزلیق',
         image: [image17, image18, image19, image20],
-        price_display: '560,000',
         price: 560000,
         des: [  "ارسال به همراه استیکر پک و کارت تشکر هدیه", "۱۰۰‌٪ پنبه از دشت‌های کورشتوپیا", 
                 "دوخته شده توسط خیاط‌های زبردست ایمان آباد", "چاپ سیلک برجسته توسط هنرمندان میالند",

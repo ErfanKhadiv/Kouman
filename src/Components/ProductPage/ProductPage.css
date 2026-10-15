@@ -221,3 +221,32 @@
         font-size: 15px;
     }
 }
+
+/* ---- additions: add-to-cart is now a real <button> ---- */
+button.addtobasket {
+    border: none;
+    font-family: inherit;
+}
+
+.img-boxes img.thumb-active {
+    border: 2px solid hsl(112, 23%, 25%);
+}
+
+.go-to-cart {
+    text-align: center;
+    color: hsl(112, 23%, 25%);
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.quantity button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.productpage a:focus-visible,
+.productpage button:focus-visible,
+.img-boxes img:focus-visible {
+    outline: 3px solid #354F31;
+    outline-offset: 2px;
+}

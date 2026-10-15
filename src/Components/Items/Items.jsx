@@ -1,28 +1,32 @@
-import React, { useState } from 'react'
-import './Items.css'
+import { useState } from 'react'
 import { Link } from 'react-router'
+import './Items.css'
+import { formatPrice } from '../../utils/format'
+import { useLanguage } from '../../i18n/useLanguage'
 
-export const Items = (props) => {
+export const Items = ({ id, name, image1, image2, price }) => {
+  const { t } = useLanguage()
+  const [image, setImage] = useState(image1)
 
-    let [image, setImage] = useState(props.image1)
-
-    return (
-        <div className='item'>
-            <div className='img-box'>
-                <Link to={`/product/${props.id}`}>
-                    <img onMouseOver={() => setImage(props.image2)}
-                        onMouseOut={() => setImage(props.image1)}
-                        src={image}
-                        onClick={() => window.scrollTo(0, 100)}
-                        alt="product picture" />
-                </Link>
-            </div>
-            <div className='item-name item-info'>
-                <span>{props.name}</span>
-            </div>
-            <div className='item-price item-info'>
-                <span>{props.price} تومان</span>
-            </div>
-        </div>
-    )
+  return (
+    <div className='item'>
+      <div className='img-box'>
+        <Link
+          to={`/product/${id}`}
+          onMouseEnter={() => setImage(image2)}
+          onMouseLeave={() => setImage(image1)}
+          onFocus={() => setImage(image2)}
+          onBlur={() => setImage(image1)}
+        >
+          <img src={image} alt={name} loading='lazy' />
+        </Link>
+      </div>
+      <div className='item-name item-info'>
+        <span>{name}</span>
+      </div>
+      <div className='item-price item-info'>
+        <span>{formatPrice(price)} {t('currency')}</span>
+      </div>
+    </div>
+  )
 }

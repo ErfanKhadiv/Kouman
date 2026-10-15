@@ -15,14 +15,46 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
-    padding: 0;
+	padding: 0;
+}
+
+/* Buttons and inputs don't inherit the page font by default. */
+button, input, select, textarea {
+	font-family: inherit;
 }
 
 body {
     background-color: #F0E6D3;
     margin: 0;
     padding: 0;
-    font-family: 'Yekan';
+    font-family: 'Yekan', Tahoma, 'Segoe UI', sans-serif;
+}
+
+/* Direction follows the language switch (<html lang dir> is set in LanguageProvider). */
+html[dir='rtl'] body {
     direction: rtl;
     text-align: right;
+}
+
+html[dir='ltr'] body {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Yekan is a Persian typeface; use a clean Latin font for English. */
+html[lang='en'] body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+a:focus-visible,
+button:focus-visible {
+	outline: 3px solid #354F31;
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
 }
